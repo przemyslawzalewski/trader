@@ -38,7 +38,7 @@ export default function Home() {
 
         <div className={styles.section}>
           <div className={styles.list}>
-            {traders.map((trader) => (
+            {traders.slice(0, 10).map((trader) => (
               <a
                 href={`/traders/${trader.id}`}
                 className={styles.listItem}

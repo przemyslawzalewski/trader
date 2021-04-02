@@ -1,11 +1,13 @@
 import faker from "faker";
 
+const COUNT = 15000;
+
 const range = (n) =>
   Array(n)
     .fill(0)
     .map((_, index) => index);
 
-export const traders = range(10).map((index) => ({
+export const traders = range(COUNT).map((index) => ({
   id: `${index + 1}`,
   name: faker.company.companyName(),
   trade: faker.name.jobTitle(),
