@@ -18,7 +18,7 @@ export const traders = [
   {
     id: "0",
     name: "Przemysław Zalewski",
-    trade: "Programming",
+    trade: "Plumber",
     location: "Wrocław",
     postCode: "50-304",
     area: "Dolnośląskie",
