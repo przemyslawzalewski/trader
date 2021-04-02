@@ -1,6 +1,8 @@
 import faker from "faker";
 import styles from "./styles/Home.module.css";
 
+faker.seed(123);
+
 const Footer = () => (
   <footer className={styles.footer}>
     <div>

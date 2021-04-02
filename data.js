@@ -1,6 +1,13 @@
 import faker from "faker";
+import Random from "./random";
 
-const COUNT = 5000;
+faker.seed(123);
+
+const random = new Random(123);
+
+const randomFloat = () => random.nextFloat();
+
+const COUNT = 50;
 
 const range = (n) =>
   Array(n)
@@ -16,27 +23,27 @@ export const traders = range(COUNT).map((index) => ({
   area: faker.address.cityName(),
   email: faker.internet.email(),
   ratings: Math.floor(Math.random() * 1000),
-  rating: (Math.random() * 5).toFixed(2),
+  rating: (randomFloat() * 5).toFixed(2),
   phone: faker.phone.phoneNumber(),
   description: {
-    paragraphs: range(2 + Math.floor(Math.random() * 10)).map(() =>
+    paragraphs: range(2 + Math.floor(randomFloat() * 10)).map(() =>
       faker.lorem.paragraph()
     ),
   },
-  reviews: range(2 + Math.floor(Math.random() * 100)).map((index) => ({
+  reviews: range(2 + Math.floor(randomFloat() * 100)).map((index) => ({
     id: `${index + 1}`,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     date: faker.date.past().toISOString(),
     quote: faker.lorem.paragraph(),
-    rating: (Math.random() * 5).toFixed(2),
-    reply: Math.random() < 0.1 ? faker.lorem.paragraph() : null,
-    impression: Math.floor(Math.random() * 5),
-    cleanliness: Math.floor(Math.random() * 5),
-    value: Math.floor(Math.random() * 5),
-    punctuality: Math.floor(Math.random() * 5),
-    quality: Math.floor(Math.random() * 5),
-    overall: Math.floor(Math.random() * 5),
-    recommend: Math.random() < 0.9,
-    lead: Math.random() < 0.7,
+    rating: (randomFloat() * 5).toFixed(2),
+    reply: randomFloat() < 0.1 ? faker.lorem.paragraph() : null,
+    impression: Math.floor(randomFloat() * 5),
+    cleanliness: Math.floor(randomFloat() * 5),
+    value: Math.floor(randomFloat() * 5),
+    punctuality: Math.floor(randomFloat() * 5),
+    quality: Math.floor(randomFloat() * 5),
+    overall: Math.floor(randomFloat() * 5),
+    recommend: randomFloat() < 0.9,
+    lead: randomFloat() < 0.7,
   })),
 }));

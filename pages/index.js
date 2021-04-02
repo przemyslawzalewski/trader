@@ -5,6 +5,8 @@ import dateFormatter from "../dateFormatter";
 import styles from "../styles/Home.module.css";
 import { traders } from "../data";
 
+faker.seed(123);
+
 const [firstTrader] = traders;
 const [firstTraderFirstReview] = firstTrader.reviews;
 
