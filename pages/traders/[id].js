@@ -28,8 +28,9 @@ export default function Trader({ trader }) {
                 className={styles.listItem}
                 key={trader.id}
               >
-                <h3>
-                  <div>{trader.name}</div>
+                <h3 className={styles.traderHeader}>
+                  <img className={styles.traderImage} src={trader.imageUrl} />{" "}
+                  {trader.name}
                 </h3>
                 <p>
                   <b>{trader.trade}</b> in <b>{trader.location}</b>,{" "}

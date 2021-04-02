@@ -7,7 +7,7 @@ const random = new Random(123);
 
 const randomFloat = () => random.nextFloat();
 
-const COUNT = 5000;
+const COUNT = 500;
 
 const range = (n) =>
   Array(n)
@@ -25,6 +25,7 @@ export const traders = range(COUNT).map((index) => ({
   ratings: Math.floor(randomFloat() * 1000),
   rating: (randomFloat() * 5).toFixed(2),
   phone: faker.phone.phoneNumber(),
+  imageUrl: `http://www.avatarpro.biz/avatar/${index + 1}?s=256`,
   description: {
     paragraphs: range(2 + Math.floor(randomFloat() * 10)).map(() =>
       faker.lorem.paragraph()
