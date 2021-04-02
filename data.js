@@ -1,6 +1,6 @@
 import faker from "faker";
 
-const COUNT = 5000;
+const COUNT = 15000;
 
 const range = (n) =>
   Array(n)
