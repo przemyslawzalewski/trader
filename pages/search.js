@@ -68,8 +68,8 @@ export default function Home() {
 
         <div className={styles.section}>
           <div>
-            <button class={styles.button}>‹ Prev</button>{" "}
-            <button class={styles.button}>› Next</button>
+            <button className={styles.button}>‹ Prev</button>{" "}
+            <button className={styles.button}>› Next</button>
           </div>
           <div>Page 1 of 33</div>
         </div>

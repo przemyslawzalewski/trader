@@ -1,6 +1,6 @@
 import faker from "faker";
 
-const COUNT = 15000;
+const COUNT = 1500;
 
 const range = (n) =>
   Array(n)
@@ -23,7 +23,7 @@ export const traders = range(COUNT).map((index) => ({
       faker.lorem.paragraph()
     ),
   },
-  reviews: range(2 + Math.floor(Math.random() * 500)).map((index) => ({
+  reviews: range(2 + Math.floor(Math.random() * 100)).map((index) => ({
     id: `${index + 1}`,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     date: faker.date.past().toISOString(),
