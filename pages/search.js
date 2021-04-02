@@ -3,12 +3,12 @@ import Footer from "../Footer";
 import styles from "../styles/Home.module.css";
 import { traders } from "../data";
 
-export default function Home() {
+export default function Search() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Find the most trusted local Plumbers in London | Trader</title>
+        <link href="/favicon.png" rel="icon" type="image/png" />
       </Head>
 
       <main className={styles.main}>

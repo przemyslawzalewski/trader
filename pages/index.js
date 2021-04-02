@@ -4,8 +4,13 @@ import Footer from "../Footer";
 import dateFormatter from "../dateFormatter";
 import styles from "../styles/Home.module.css";
 import { traders } from "../data";
+import Random from "../random";
 
 faker.seed(123);
+
+const random = new Random(123);
+
+const randomFloat = () => random.nextFloat();
 
 const [firstTrader] = traders;
 const [firstTraderFirstReview] = firstTrader.reviews;
@@ -14,8 +19,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Find a local trader | Trader</title>
+        <link href="/favicon.png" rel="icon" type="image/png" />
       </Head>
 
       <main className={styles.main}>
@@ -53,7 +58,7 @@ export default function Home() {
 
         <div className={styles.section}>
           <h2>Proud of your work?</h2>
-          <p>{(Math.random() * 1000 + 1).toFixed(3).replace(".", ",")}</p>
+          <p>{(randomFloat() * 1000 + 1).toFixed(3).replace(".", ",")}</p>
           <p>Searches made in the last 30 days by visitors</p>
         </div>
 

@@ -4,12 +4,12 @@ import Footer from "../../Footer";
 import dateFormatter from "../../dateFormatter";
 import { traders } from "../../data";
 
-export default function Home({ trader }) {
+export default function Trader({ trader }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Plumbers in London - {trader.name} | Trader</title>
+        <link href="/favicon.png" rel="icon" type="image/png" />
       </Head>
 
       <main className={styles.main}>
