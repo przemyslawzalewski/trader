@@ -24,6 +24,14 @@
   width: 100%;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
 .footer {
   width: 100%;
   min-height: 100px;
@@ -59,6 +67,15 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
 }
 
 .title,

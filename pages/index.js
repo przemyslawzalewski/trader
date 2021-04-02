@@ -1,6 +1,7 @@
 import faker from "faker";
 import Head from "next/head";
 import Footer from "../Footer";
+import Header from "../Header";
 import dateFormatter from "../dateFormatter";
 import styles from "../styles/Home.module.css";
 import { traders } from "../data";
@@ -24,25 +25,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <a href="/">
-          <h1 className={styles.title}>Find a local trader</h1>
-        </a>
-
-        <form action="/search" className={styles.form}>
-          <input
-            className={styles.input}
-            type="text"
-            name="q"
-            placeholder="Trade (e.g. Plumber)"
-          />
-          <input
-            className={styles.input}
-            type="text"
-            name="location"
-            placeholder="Near"
-          />
-          <button className={styles.button}>Search</button>
-        </form>
+        <Header />
 
         <div className={styles.section}>
           <h2>You can trust our traders</h2>

@@ -7,7 +7,7 @@ const random = new Random(123);
 
 const randomFloat = () => random.nextFloat();
 
-const COUNT = 50;
+const COUNT = 5000;
 
 const range = (n) =>
   Array(n)
@@ -22,7 +22,7 @@ export const traders = range(COUNT).map((index) => ({
   postCode: faker.address.zipCode(),
   area: faker.address.cityName(),
   email: faker.internet.email(),
-  ratings: Math.floor(Math.random() * 1000),
+  ratings: Math.floor(randomFloat() * 1000),
   rating: (randomFloat() * 5).toFixed(2),
   phone: faker.phone.phoneNumber(),
   description: {
