@@ -34,7 +34,7 @@ export default function Home({ trader }) {
         </form>
 
         <div className={styles.section}>
-          <h2>DJ and Sons Plumbing & Heating</h2>
+          <h2>{trader.name}</h2>
         </div>
 
         <div className={styles.section}>
