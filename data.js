@@ -25,7 +25,7 @@ export const traders = [
     email: "przemyslaw.zalewski@sandstream.pl",
     ratings: 0,
     rating: 0,
-    imageUrl: "https://www.avatarpro.biz/avatar/0?s=256",
+    imageUrl: "https://i.pravatar.cc/256?u=0",
     description: {
       paragraphs: ["Test"],
     },
@@ -57,7 +57,7 @@ export const traders = [
     ratings: Math.floor(randomFloat() * 1000),
     rating: (randomFloat() * 5).toFixed(2),
     phone: faker.phone.phoneNumber(),
-    imageUrl: `https://www.avatarpro.biz/avatar/${index + 1}?s=256`,
+    imageUrl: `https://i.pravatar.cc/256?${index + 1}`,
     description: {
       paragraphs: range(2 + Math.floor(randomFloat() * 10)).map(() =>
         faker.lorem.paragraph()
