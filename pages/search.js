@@ -33,7 +33,7 @@ export default function Search() {
                 </h3>
                 <p>
                   <b>{trader.trade}</b> in <b>{trader.location}</b>,{" "}
-                  {trader.postCode}. Covering {trader.area} and Surrounding
+                  {trader.postcode}. Covering {trader.area} and Surrounding
                   Areas
                 </p>
                 <p>

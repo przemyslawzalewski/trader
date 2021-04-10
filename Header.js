@@ -8,7 +8,7 @@ const Header = () => (
       </h1>
     </a>
 
-    <form action="/search" className={styles.form}>
+    <form action="/search" className={styles.search}>
       <input
         className={styles.input}
         type="text"
