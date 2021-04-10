@@ -147,7 +147,7 @@
   }
 }
 
-.form {
+.search {
   display: flex;
   gap: 16px;
 }
@@ -196,4 +196,39 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
+}
+
+.form {
+  display: grid;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.formLabel {
+  position: relative;
+}
+
+.formLabelText {
+  position: absolute;
+  top: 0;
+  top: -12px;
+  left: 8px;
+  background: white;
+  padding: 2px 8px;
+  color: #757474;
+}
+
+.formInput {
+  margin: 0;
+  border: 1px solid lightgray;
+  font-size: inherit;
+  padding: 16px;
+  border-radius: 6px;
+  flex-grow: 1;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  min-height: 64px;
+  box-sizing: border-box;
+  line-height: 1.7;
 }

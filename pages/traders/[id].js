@@ -34,7 +34,7 @@ export default function Trader({ trader }) {
                 </h3>
                 <p>
                   <b>{trader.trade}</b> in <b>{trader.location}</b>,{" "}
-                  {trader.postCode}. Covering {trader.area} and Surrounding
+                  {trader.postcode}. Covering {trader.area} and Surrounding
                   Areas
                 </p>
                 <p>
@@ -56,6 +56,67 @@ export default function Trader({ trader }) {
           {trader.description.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
+        </div>
+
+        <div className={styles.section} id="contact">
+          <h2>Contact</h2>
+          <img
+            className="targetable"
+            id="contact-success"
+            src="https://media2.giphy.com/media/Qs79cNS60bhY9UC1dP/giphy.gif"
+          />
+          <img
+            className="targetable"
+            id="contact-error"
+            src="https://media0.giphy.com/media/Lo0IDynmNuIv4WpYrl/giphy.gif"
+          />
+          <form
+            action="/api/contact"
+            className={styles.form}
+            method="POST"
+            encType="multipart/form-data"
+          >
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>Name</div>
+              <input className={styles.formInput} type="text" name="name" />
+            </label>
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>Phone</div>
+              <input className={styles.formInput} type="tel" name="phone" />
+            </label>
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>City</div>
+              <input className={styles.formInput} type="text" name="city" />
+            </label>
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>Postcode</div>
+              <input className={styles.formInput} type="text" name="postcode" />
+            </label>
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>Message</div>
+              <textarea className={styles.formInput} name="message" rows={4} />
+            </label>
+            <label className={styles.formLabel}>
+              <div className={styles.formLabelText}>Attachments</div>
+              <input
+                className={styles.formInput}
+                type="file"
+                name="attachments"
+                multiple
+              />
+            </label>
+            <input
+              type="hidden"
+              name="successUrl"
+              value={`/traders/${trader.id}#contact-success`}
+            />
+            <input
+              type="hidden"
+              name="errorUrl"
+              value={`/traders/${trader.id}#contact-error`}
+            />
+            <button className={styles.button}>Send email</button>
+          </form>
         </div>
 
         <div className={styles.section}>

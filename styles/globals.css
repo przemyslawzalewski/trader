@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.targetable:not(:target) {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
